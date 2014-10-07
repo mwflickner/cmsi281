@@ -32,7 +32,7 @@ public class StringBag implements SimpleCollection{
 	}
 
 	public void clear(){
-		this.bag = new java.util.ArrayList<String>(DEFAULTSIZE);
+		this.bag.clear();
 	}
 
 	public boolean contains ( Object o ){
