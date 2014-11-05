@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 public class WordSort {
 
 	public static void main(String args[]){
+		char check;
+
+
 		try{
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
