@@ -11,11 +11,12 @@ public class WordSort {
 		try{
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-			String input = stdin.readLine();
+			String input;
 
 			while((input=br.readLine())!=null){
-				input = stdin.readLine();
+				System.out.println(input);
 			}
+
 		}catch(IOException io){
 			io.printStackTrace();
 		}
