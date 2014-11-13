@@ -2,6 +2,9 @@ public class CustomizedStack{
 
 	private Node top = null;
 	
+	public CustomizedStack(){
+		this.top = null;
+	}
 
 	public void push(Object item){
 		top = new Node(item, top);
