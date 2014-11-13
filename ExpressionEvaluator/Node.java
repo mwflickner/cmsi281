@@ -24,6 +24,11 @@ public class Node {
 	//set the data in the Node
 	public boolean setData(Object contents){
 		this.data = contents;
+		return true;
+	}
+
+	public Object getData(){
+		return this.data;
 	}
 
 	//set the next pointer
@@ -33,16 +38,16 @@ public class Node {
 	}
 
 	//sets the previous pointer
-	public boolean setPrevious(int newPrev){
+	public boolean setPrevious(Node newPrev){
 		this.previous = newPrev;
 		return true;
 	}
 
-	public int getNext(){
+	public Node getNext(){
 		return this.next;
 	}
 
-	public int getPrevious(){
+	public Node getPrevious(){
 		return this.previous;
 	}
 
