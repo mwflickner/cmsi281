@@ -10,24 +10,11 @@ public class ExpressionEvaluator{
 	}
 
 	public static boolean isOperator(String operator){
-		if(operator.equals("+")){
-			return true;
-		}
-		else if(operator.equals("-")){
-			return true;
-		}
-		else if(operator.equals("x")){
-			return true;
-		}
-		else if(operator.equals("/")){
-			return true;
-		}
-		else if(operator.equals("%")){
-			return true;
-		}
-		else{
-			return false;
-		}
+		return operator.equals("+")
+			|| operator.equals("-")
+			|| operator.equals("x")
+			|| operator.equals("/")
+			|| operator.equals("%");
 
 	}
 
@@ -55,13 +42,11 @@ public class ExpressionEvaluator{
 		for (int i = 0; i<args.length; i++){
 			if(isInteger(args[i])){
 				reversePolish.push(Integer.parseInt(args[i]));
-				System.out.println("pushed "+ Integer.parseInt(args[i]));
 			}
 			else if(isOperator(args[i])){
 				int val1 = (Integer) reversePolish.pop();
 				int val2 = (Integer) reversePolish.pop();
 				int newPush = operation(args[i], val2, val1);
-				System.out.println("New push after operation is " + newPush);
 				reversePolish.push(newPush);
 			}
 			
@@ -71,7 +56,7 @@ public class ExpressionEvaluator{
 		
 		}
 		int output = (Integer) reversePolish.pop();
-		System.out.println("Lewandowski!!! Answer is " + output);	
+		System.out.println(output);	
 	}
 
 }
