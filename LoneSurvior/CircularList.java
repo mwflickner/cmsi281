@@ -1,25 +1,24 @@
 public class CircularList{
-	private Node current = null;
-	private Node last = null;
+	private Node cursor = new Node(null,null,null);
+	private int size = 0;
 
 	//Constructs an empty Circular List
 	public CircularList(){
-		this.current = null;
-		this.last = null;
+		cursor = new Node(null, null, null)
+		cursor.next = cursor.previous = cursor;
 
 	}
 
-	public void insert(<Object> int digit){
-		last = current;
-		current = new Node(digit, last);
-		last.setNext(current);
+	public addAtStart(Object item){
+
+	}
+
+	public void insertBefore(<Object> int digit){
 
 	}
 
 	public void remove(){
-		last.setNext(current.next);
-		current.next.setPrev(last);
-		current = null;
+
 	}
 
 
