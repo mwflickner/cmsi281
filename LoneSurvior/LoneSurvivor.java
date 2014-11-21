@@ -31,13 +31,12 @@ public class LoneSurvivor{
 		Node bye;
 		while(survive.getSize() != 1){
 			survive.traverse(k);
-			System.out.println("the cursor should remove " + survive.getCursor().toString());
 			survive.traverse(1);
-			System.out.println("the cursor is on " + survive.getCursor().toString());
 			survive.remove(survive.getCursor().getPrevious());
 			
 		}
 
+		System.out.println(survive.getCursor().toString());
 
 	}
 }
