@@ -29,11 +29,10 @@ public class CircularList{
 		if (index < 0 || index > size){
 			throw new IndexOutOfBoundsException("Index is not in range");
 		}
-		Node base = cursor;
 		for(int i = 0; i <= index; i++){
-			base = base.getNext();
+			cursor = cursor.getNext();
 		}
-		return base;
+		return cursor;
 
 	}
 
