@@ -4,17 +4,25 @@ public class CircularList{
 
 	//Constructs an empty Circular List
 	public CircularList(){
-		cursor = new Node(null, null, null);
-		cursor.setNext(cursor);
-		cursor.setPrevious(cursor);
+		this.cursor = new Node(null, null, null);
+		this.cursor.setNext(cursor);
+		this.cursor.setPrevious(cursor);
 
 	}
 
 	public CircularList(Object obj){
-		cursor = new Node(obj, null, null);
-		cursor.setNext(cursor);
-		cursor.setPrevious(cursor);
+		this.cursor = new Node(obj, null, null);
+		this.cursor.setNext(cursor);
+		this.cursor.setPrevious(cursor);
 		size++;
+	}
+
+	public void setCursor(Node node){
+		cursor = node;
+	}
+
+	public Node getCursor(){
+		return cursor;
 	}
 
 	public Node traverse(int index){
