@@ -22,7 +22,7 @@ public class LoneSurvivor{
 		int k = Integer.parseInt(args[1]);
 
 		CircularList survive = new CircularList(0);
-		for(int i = 0; i <= n; i++){
+		for(int i = 1; i < n; i++){
 			survive.addAtStart(i);
 		}
 		survive.traverse(1);
@@ -31,11 +31,11 @@ public class LoneSurvivor{
 		Node bye;
 		while(survive.getSize() != 1){
 			survive.traverse(k);
+			System.out.println("the cursor should remove " + survive.getCursor().toString());
 			survive.traverse(1);
-			survive.remove(survive.getCursor().getPrevious());
-
-			System.out.println("size of list is " + survive.getSize());
 			System.out.println("the cursor is on " + survive.getCursor().toString());
+			survive.remove(survive.getCursor().getPrevious());
+			
 		}
 
 
