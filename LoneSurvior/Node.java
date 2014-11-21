@@ -31,16 +31,18 @@ public class Node {
 		return this.data;
 	}
 
+	public boolean isEqual(Object tester){
+		return(tester==data);
+	}
+
 	//set the next pointer
-	public boolean setNext(Node newNext){
+	public void setNext(Node newNext){
 		this.next = newNext;
-		return true;
 	}
 
 	//sets the previous pointer
-	public boolean setPrevious(Node newPrev){
+	public void setPrevious(Node newPrev){
 		this.previous = newPrev;
-		return true;
 	}
 
 	public Node getNext(){
