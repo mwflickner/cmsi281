@@ -21,10 +21,11 @@ public class LoneSurvivor{
 		int n = Integer.parseInt(args[0]);
 		int k = Integer.parseInt(args[1]);
 
-		CircularList survive = new CircularList(n);
-		for(int i = n-1; i >= 0; i--){
-			survive.addAtStart(n);
+		CircularList survive = new CircularList(0);
+		for(int i = 0; i <= n; i++){
+			survive.addAtStart(i);
 		}
+		survive.traverse(1);
 		System.out.println("size of list is " + survive.getSize());
 
 		Node bye;

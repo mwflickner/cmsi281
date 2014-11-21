@@ -18,22 +18,32 @@ public class CircularList{
 	}
 
 	public void setCursor(Node node){
-		cursor = node;
+		this.cursor = node;
 	}
 
 	public Node getCursor(){
 		return cursor;
 	}
 
-	public Node traverse(int index){
+	public Node indexAt(int index){
 		if (index < 0 || index > size){
 			throw new IndexOutOfBoundsException("Index is not in range");
 		}
 		for(int i = 0; i <= index; i++){
-			cursor = cursor.getNext();
+			setCursor(cursor.getNext());
 		}
 		return cursor;
 
+	}
+
+	public void traverse(int distance){
+		if(distance < 0){
+			throw new IndexOutOfBoundsException();
+		}
+		while(distance != 0){
+			setCursor(cursor.getNext());
+			distance--;
+		}
 	}
 
 	public int indexAt(Object obj){
@@ -53,6 +63,7 @@ public class CircularList{
 
 	public void addAtStart(Object obj){
 		insertBefore(obj, cursor.getNext());
+		setCursor(cursor.getNext());
 	}
 
 	public void addToEnd(Object obj){
@@ -72,6 +83,7 @@ public class CircularList{
 	public void remove(Node node){
 		node.getPrevious().setNext(node.getNext());
 		node.getNext().setPrevious(node.getPrevious());
+		size--;
 
 	}
 
