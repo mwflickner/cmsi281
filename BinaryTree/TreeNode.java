@@ -1,21 +1,21 @@
 public class TreeNode {
 	private Object data;
 	private TreeNode parent;
-	private TreeNode lSon;
-	private TreeNode rBro;
+	private TreeNode left;
+	private TreeNode right;
 
 	public TreeNode(){
 		this.data = null;
 		this.parent = null;
-		this.lSon = null;
-		this.rBro = null;
+		this.left = null;
+		this.right = null;
 	}
 
 	public TreeNode(Object o){
 		this.data = o;
 		this.parent = null;
-		this.lSon = null;
-		this.rBro = null;
+		this.left = null;
+		this.right = null;
 	}
 
 	public void setData(Object o){
@@ -34,20 +34,40 @@ public class TreeNode {
 		this.parent = null;
 	}
 
-	public void setLSon(TreeNode newLSon){
-		this.lSon = newLSon;
+	public boolean hasLeft(){
+		if(this.left==null){
+			return false;
+		}
+		else{
+			return true;
+		}
 	}
 
-	public void removeLSon(){
-		this.lSon = null;
+
+	public void setLeft(TreeNode newLeft){
+		this.left = newLeft;
 	}
 
-	public void setRBro(TreeNode newRBro){
-		this.rBro = newRBro;
+	public void removeLeft(){
+		this.left = null;
 	}
 
-	public void removeRBro(){
-		this.rBro = null;
+
+	public boolean hasRight(){
+		if(this.right==null){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+
+	public void setRight(TreeNode newRight){
+		this.right = newRight;
+	}
+
+	public void removeRight(){
+		this.right = null;
 	}
 
 	public boolean nodeEmpty(){
