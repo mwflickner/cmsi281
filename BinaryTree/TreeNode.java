@@ -4,6 +4,7 @@ public class TreeNode {
 	private TreeNode left;
 	private TreeNode right;
 
+
 	public TreeNode(){
 		this.data = null;
 		this.parent = null;
@@ -26,12 +27,27 @@ public class TreeNode {
 		this.data = null;
 	}
 
-	public void setParent(TreeNode newParent){
-		this.parent = newParent;
+	public void setParent(TreeNode node){
+		this.parent = node;
 	}
 
-	public void removeParent(){
-		this.parent = null;
+	public TreeNode getLeft(){
+		return this.left;
+	}
+	public void setLeft(TreeNode node){
+		this.left = node;
+	}
+	public void setRight(TreeNode node){
+		this.right = node;
+	}
+
+	public boolean hasRight(){
+		if(this.right==null){
+			return false;
+		}
+		else{
+			return true;
+		}
 	}
 
 	public boolean hasLeft(){
@@ -43,33 +59,6 @@ public class TreeNode {
 		}
 	}
 
-
-	public void setLeft(TreeNode newLeft){
-		this.left = newLeft;
-	}
-
-	public void removeLeft(){
-		this.left = null;
-	}
-
-
-	public boolean hasRight(){
-		if(this.right==null){
-			return false;
-		}
-		else{
-			return true;
-		}
-	}
-
-	public void setRight(TreeNode newRight){
-		this.right = newRight;
-	}
-
-	public void removeRight(){
-		this.right = null;
-	}
-
 	public boolean nodeEmpty(){
 		if(this.data == null){
 			return true;
@@ -78,6 +67,8 @@ public class TreeNode {
 			return false;
 		}
 	}
+
+	
 
 
 
