@@ -30,8 +30,4 @@ public class CustomizedStack{
 		}
 		return size;
 	}
-
-	
-
-
 }

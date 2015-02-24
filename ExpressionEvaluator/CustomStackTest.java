@@ -8,10 +8,7 @@ public class CustomStackTest{
 		testStack.push(args[1]);
 		output = testStack.pop();
 		System.out.println("The Stack pops " + output);
-
 	}
-
-
 }
 
 	

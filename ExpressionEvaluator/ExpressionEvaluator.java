@@ -15,7 +15,6 @@ public class ExpressionEvaluator{
 			|| operator.equals("x")
 			|| operator.equals("/")
 			|| operator.equals("%");
-
 	}
 
 	public static int operation(String operator, int var1, int var2){
@@ -34,7 +33,6 @@ public class ExpressionEvaluator{
 		else{
 			return var1%var2;
 		}
-
 	}
 	
 	public static void main(String[] args){
@@ -58,5 +56,4 @@ public class ExpressionEvaluator{
 		int output = (Integer) reversePolish.pop();
 		System.out.println(output);	
 	}
-
 }
