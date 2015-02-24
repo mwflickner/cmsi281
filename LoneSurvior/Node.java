@@ -53,5 +53,9 @@ public class Node {
 		return this.previous;
 	}
 
+	public String toString(){
+		return this.data.toString();
+	}
+
 
 }

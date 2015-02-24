@@ -78,8 +78,6 @@ public class CircularList{
 
 	}
 
-
-
 	public void remove(Node node){
 		node.getPrevious().setNext(node.getNext());
 		node.getNext().setPrevious(node.getPrevious());

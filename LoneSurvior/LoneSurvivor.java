@@ -26,17 +26,13 @@ public class LoneSurvivor{
 			survive.addAtStart(i);
 		}
 		survive.traverse(1);
-		System.out.println("size of list is " + survive.getSize());
 
 		Node bye;
 		while(survive.getSize() != 1){
 			survive.traverse(k);
 			survive.traverse(1);
-			survive.remove(survive.getCursor().getPrevious());
-			
+			survive.remove(survive.getCursor().getPrevious());	
 		}
-
 		System.out.println(survive.getCursor().toString());
-
 	}
 }
