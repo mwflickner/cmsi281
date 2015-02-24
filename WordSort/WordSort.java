@@ -5,11 +5,8 @@ import java.util.Arrays;
 
 public class WordSort {
 
-	//public String theSort
-
 	public static void main(String args[]){
 		char check;
-
 
 		try{
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -52,6 +49,7 @@ public class WordSort {
 					prevWasLetter = false;
 				}
 			}
+
 			String[] shortWordList = new String[wordCount];
 
 			for(int i = 0; i<wordCount; i++){
@@ -61,20 +59,11 @@ public class WordSort {
 			Arrays.sort(shortWordList);
 
 			for(int i= 0; i< shortWordList.length; i++){
-				System.out.println("Array index " + i + " is " + shortWordList[i]);
+				System.out.println(shortWordList[i]);
 			}
-				
-
-			
-
-		/*	while((input=br.readLine())!=null){
-				System.out.println(input);
-			}
-		*/
 
 		}catch(IOException io){
 			System.out.println("Sorry it didn't work");
 		}
-
 	}
 }
