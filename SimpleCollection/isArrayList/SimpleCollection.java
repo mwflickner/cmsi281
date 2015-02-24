@@ -23,6 +23,5 @@ public interface SimpleCollection {
     
     /** Returns an array containing all of the elements in this collection. */
     public Object[] toArray();
-
 }
 

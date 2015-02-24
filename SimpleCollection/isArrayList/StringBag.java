@@ -35,9 +35,4 @@ public class StringBag extends java.util.ArrayList<Object> implements SimpleColl
 		}
 		return false;
 	}
-
-	
-
-	
-
 }

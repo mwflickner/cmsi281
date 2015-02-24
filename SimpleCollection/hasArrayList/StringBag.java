@@ -58,5 +58,4 @@ public class StringBag implements SimpleCollection{
 	public Object[] toArray(){
 		return this.bag.toArray();
 	}
-
 }
